@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans&display=swap");
+
+//  =============== Variables =============== //
+
+// Fonts
+$primary-font: Barlow;
+$secondary-font: Barlow Condensed;
+
+// Colors
+$color-primary: #ffffff;
+$color-secondary: #e8ab36;
+$color-grey: rgba(255, 255, 255, 0.5);
+$color-accent: #e6606c;
+$color-grayish: #EFEFEF;
+
+// Sizes
+$content-width: 1200px;
+
+//  =============== Extends =============== //
+%barlow-white{
+    font-family: $primary-font;
+    color: $color-primary;
+}
+%btn-common{
+        width: 152px;
+        height: 43px;
+        display: inline-block;
+        border-radius: 75px;
+        padding: 12px 29px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.63px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-style: normal;
+        font-family: $primary-font;
+        cursor: pointer;
+
+}
+//========================================
+
+// Reset
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-image: linear-gradient(to right, #201f22, #2c2d65);
+    font-family: $primary-font;
+}
+
+// Common
+
+.d-flex {
+    display: flex;
+}
+
+section {
+    height: 500px;
+}
+
+section>div {
+    border: 1px solid white;
+    width: 50%;
+}
+   .btn-start {
+       @extend%btn-common;
+       background-color: $color-accent;
+       color: $color-primary;
+   }
+// Header
+header {
+    width: 100%;
+
+    .container {
+        display: flex;
+        height: 100px;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        width: $content-width;
+
+        .logo {
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 32px;
+            color: $color-primary;
+
+            span {
+                color: $color-accent;
+            }
+        }
+
+        nav ul {
+            display: inline-flex;
+            align-items: flex-start;
+            gap: 33px;
+
+            a {
+                color: $color-primary;
+            }
+        }
+    }
+}
+
+main {
+    width: $content-width;
+    margin: 0 auto;
+
+    // Section 1  -TOP
+    .main-top {
+        .main-top-left {
+            display: flex;
+            align-items: center;
+
+            .main-intro {
+                position: relative;
+                border: 1px solid red;
+                width: 507px;
+                height: 324px;
+                >*{
+                    margin-bottom: 21px;
+                }
+                h1{
+                    @extend %barlow-white;
+                        font-size: 64px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: normal;
+                        letter-spacing: 2.88px;
+                        text-transform: uppercase;
+                }
+                h2{
+                    font-family: $primary-font;
+                    color: $color-secondary;
+                    font-size: 32px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: 1.44px;
+                        text-transform: uppercase;
+                }
+                p{
+                    color: $color-grey;
+                        font-family: $primary-font;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: 32px;
+                        letter-spacing: 0.72px;
+                        width: 406px;
+                }
+                .btn-more{
+                        @extend%btn-common;
+                        background-color: $color-grayish;
+                }
+                .main-buttons{
+                    display: flex;
+                    flex-direction: row;
+                    gap:24px;
+          }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: -43px;
+                    top: -47px;
+                    display: block;
+                    height: 153px;
+                    width: 142px;
+                    background-image: url(images/spiral.png);
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: 44px;
+                    bottom: -77px;
+                    display: block;
+                    height: 184px;
+                    width: 181px;
+                    background-image: url(images/dots.png);
+                }
+             
+            }
+        }
+
+        .main-top-right {
+            position: absolute;
+            background-image: url(images/bg-large.png);
+            background-size: cover;
+            top: 0;
+            right: 0;
+            width: 600px;
+            height: 635px;
+            position: absolute;
+            background-position: bottom left;
+           
+        }
+    }
+
+    // Section 2  - MIDDLE
+
+    .main-middle{
+        .main-middle-rigth{
+                display: flex;
+                    align-items: center;}
+                
+                    .aside {
+                        position: relative;
+                        border: 1px solid red;
+                        width: 507px;
+                        height: 324px;
+
+}
+    }
+    
+    // Section 3  - BOTTOM
+    .main-bottom {
+        >div {
+            width: 100%;
+        }
+    }
+
+ 
+}
+
+.icons-container {
+    display: flex;
+    gap: 30px;
+}
+
+.icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background: red;
+    border-radius: 50px;
+    margin: 5px;
+
+    img {
+        height: 16px;
+        height: 16px;
+        margin: 0 auto;
+    }
+}
