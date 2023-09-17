@@ -265,8 +265,8 @@ main {
          position: absolute;
          width: 730px;
          height: 747px;
-         top: -110px;
-         right: 33px;
+         top: -118px;
+         right: -65px;
          z-index: -1;
 
          background-repeat: no-repeat;
@@ -427,6 +427,13 @@ footer {
          .icons-container {
             display: flex;
             gap: 8px;
+            :hover {
+               cursor: pointer;
+               &:after {
+                  width: 100%;
+                  left: 0;
+               }
+            }
          }
 
          .icon {

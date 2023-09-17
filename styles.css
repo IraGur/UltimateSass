@@ -218,8 +218,8 @@ main .main-top .main-top-right {
   position: absolute;
   width: 730px;
   height: 747px;
-  top: -110px;
-  right: 33px;
+  top: -118px;
+  right: -65px;
   z-index: -1;
   background-repeat: no-repeat;
 }
@@ -380,6 +380,13 @@ footer .container .footer-top ul li {
 footer .container .footer-top .icons-container {
   display: flex;
   gap: 8px;
+}
+footer .container .footer-top .icons-container :hover {
+  cursor: pointer;
+}
+footer .container .footer-top .icons-container :hover:after {
+  width: 100%;
+  left: 0;
 }
 footer .container .footer-top .icon {
   position: relative;
