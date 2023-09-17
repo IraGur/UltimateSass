@@ -304,8 +304,8 @@ main .main-bottom .main-bottom-article p {
 main .main-bottom .main-bottom-article::before {
   content: "";
   position: absolute;
-  left: -43px;
-  top: -47px;
+  left: 323px;
+  top: -34px;
   display: block;
   height: 153px;
   width: 142px;
